@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Starting Business Digital Marketing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Starting Business Digital Marketing</h1>
+  <p>Platform Digital Marketing & Produk Digital Berbasis AI</p>
+</header>
+
+<!-- LOGIN -->
+<div id="login" class="login-box">
+  <h2>Login</h2>
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+  <p id="error"></p>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="container hidden">
+  <h2>Dashboard</h2>
+
+  <!-- SEARCH & FILTER -->
+  <input type="text" id="search" placeholder="Cari produk..." onkeyup="searchProduct()">
+
+  <select id="category" onchange="filterCategory()">
+    <option value="all">Semua Kategori</option>
+    <option value="ebook">E-Book</option>
+    <option value="template">Template</option>
+    <option value="jasa">Jasa</option>
+  </select>
+
+  <!-- PRODUK -->
+  <div class="cards" id="productList">
+    <div class="card ebook">
+      <h4>E-Book Digital Marketing</h4>
+      <p>Panduan bisnis online.</p>
+    </div>
+    <div class="card template">
+      <h4>Template Konten Instagram</h4>
+      <p>Desain promosi siap pakai.</p>
+    </div>
+    <div class="card jasa">
+      <h4>Paket Iklan Facebook</h4>
+      <p>Iklan hemat UMKM.</p>
+    </div>
+    <div class="card jasa">
+      <h4>Jasa Manajemen Sosial Media</h4>
+      <p>Kelola akun bisnis.</p>
+    </div>
+  </div>
+
+  <!-- AI -->
+  <h3>Analisis AI Marketing</h3>
+  <input type="text" id="inputAI" placeholder="Jenis produk (makanan / fashion)">
+  <button onclick="runAI()">Analisis</button>
+  <p id="resultAI"></p>
+
+  <!-- GRAFIK -->
+  <canvas id="chart" width="400" height="200"></canvas>
+
+  <button class="logout" onclick="logout()">Logout</button>
+</div>
+
+<footer>
+  <p>© 2025 Starting Business Digital Marketing</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
